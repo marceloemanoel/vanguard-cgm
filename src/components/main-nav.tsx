@@ -22,7 +22,7 @@ export function MainNav({
       {...props}
     >
       <NavLink
-        to={import.meta.env.BASE_URL}
+        to={`${import.meta.env.BASE_URL}/`}
         end
         className={({ isActive }) =>
           cn(
