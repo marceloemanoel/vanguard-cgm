@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { CalendarDateRangePicker } from "./date-range-picker";
 import { Overview } from "./overview";
 import { RecentSales } from "./recent-sales";
@@ -15,7 +16,9 @@ export default function Dashboard() {
   return (
     <>
       <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Overview</h2>
+        <h2 className="text-3xl font-bold tracking-tight">
+          <FormattedMessage description="Dashboard overview section" defaultMessage="Overview" />
+        </h2>
         <div className="flex items-center space-x-2">
           <CalendarDateRangePicker />
           <Button>Download</Button>

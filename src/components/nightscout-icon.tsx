@@ -3,7 +3,10 @@ interface NightscoutIconProps {
   height: string;
 }
 
-export default function NightscoutIcon({ width = "156px", height="212" }: NightscoutIconProps) {
+export default function NightscoutIcon({
+  width = "156px",
+  height = "212",
+}: NightscoutIconProps) {
   return (
     <svg
       width={width}
@@ -38,9 +41,8 @@ export default function NightscoutIcon({ width = "156px", height="212" }: Nights
       />
       <path
         d="M147.44 45.25C141.699 31.7589 131.939 20.3651 119.49 12.62C106.954 5.36731 92.7206 1.56509 78.238 1.60022C63.7553 1.63535 49.5404 5.50659 37.0399 12.82C24.3858 20.6966 14.4631 32.2777 8.61993 45.99C-0.0500712 66.14 -0.210093 90.34 8.15991 115.98C17.7499 145.35 37.9999 175.81 68.3499 206.53C70.1822 208.382 72.5251 209.647 75.0793 210.162C77.6335 210.676 80.2831 210.418 82.6899 209.42C84.2849 208.748 85.7323 207.77 86.9499 206.54C117.52 175.61 137.96 144.96 147.69 115.44C156.19 89.66 156.1 65.38 147.44 45.25ZM77.65 201.32C77.123 201.325 76.6005 201.223 76.1141 201.02C75.6277 200.817 75.1875 200.518 74.8199 200.14C-2.29006 122.11 8.6799 68.86 16.9699 49.58C27.1999 25.82 50.6399 10.68 76.9699 10.68C77.4499 10.68 77.9399 10.68 78.4299 10.69H78.6299C105.57 10.12 128.72 24.74 139.09 48.84C146.86 66.91 146.85 88.95 139.05 112.59C129.77 140.77 110.06 170.22 80.4799 200.15C80.11 200.524 79.6691 200.82 79.1831 201.021C78.6971 201.222 78.1758 201.323 77.65 201.32Z"
-        className="fill-black stroke-black dark:fill-white dark:stroke-white"
-        stroke-width="3"
-        stroke-miterlimit="10"
+        className="fill-black stroke-black stroke-[3] dark:fill-white dark:stroke-white"
+        strokeMiterlimit="10"
       />
     </svg>
   );

@@ -10,12 +10,13 @@ import FoodPage from "./routes/food/page";
 import AuthenticationPage from "./routes/Login";
 import ReportsPage from "./routes/reports/page";
 import RootRoute from "./routes/RootRoute";
-import SettingsAccountPage from "./routes/settings/account/page";
+import GeneralSettingsPage from "./routes/settings/general-settings/page";
 import SettingsAppearancePage from "./routes/settings/appearance/page";
 import SettingsDisplayPage from "./routes/settings/display/page";
 import SettingsPage from "./routes/settings/layout";
 import SettingsNotificationsPage from "./routes/settings/notifications/page";
 import SettingsProfilePage from "./routes/settings/profile/page";
+import I18NProvider from "./components/i18n-provider";
 
 const router = createBrowserRouter([
   {
@@ -38,28 +39,30 @@ const router = createBrowserRouter([
               <Redirect to={`${import.meta.env.BASE_URL}/settings/general`} options={{ replace: true }} />
             ),
           },
-          { path: "profile", element: <SettingsProfilePage /> },
-          { path: "notifications", element: <SettingsNotificationsPage /> },
-          { path: "display", element: <SettingsDisplayPage /> },
-          { path: "appearance", element: <SettingsAppearancePage /> },
-          { path: "account", element: <SettingsAccountPage /> },
+          { path: `${import.meta.env.BASE_URL}/settings/general`, element: <GeneralSettingsPage /> },
+          { path: `${import.meta.env.BASE_URL}/settings/profile`, element: <SettingsProfilePage /> },
+          { path: `${import.meta.env.BASE_URL}/settings/notifications`, element: <SettingsNotificationsPage /> },
+          { path: `${import.meta.env.BASE_URL}/settings/display`, element: <SettingsDisplayPage /> },
+          { path: `${import.meta.env.BASE_URL}/settings/appearance`, element: <SettingsAppearancePage /> },
         ],
       },
     ],
   },
   {
-    path: "/auth",
+    path: `${import.meta.env.BASE_URL}/auth`,
     element: <AuthenticationPage />,
   },
 ]);
 
 function App() {
   return (
-    <HelmetProvider>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </HelmetProvider>
+    <I18NProvider>
+      <HelmetProvider>
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </HelmetProvider>
+    </I18NProvider>
   );
 }
 
