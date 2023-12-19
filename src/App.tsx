@@ -19,23 +19,23 @@ import SettingsProfilePage from "./routes/settings/profile/page";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: import.meta.env.BASE_URL,
     element: <RootRoute />,
     errorElement: <NotFoundPage />,
     children: [
-      { path: "/", element: <Dashboard /> },
-      { path: "/careportal", element: <CarePortalPage /> },
-      { path: "/bolus-wizard", element: <BolusWizardPage /> },
-      { path: "/food", element: <FoodPage /> },
-      { path: "/reports", element: <ReportsPage /> },
+      { index: true, element: <Dashboard /> },
+      { path: `${import.meta.env.BASE_URL}/careportal`, element: <CarePortalPage /> },
+      { path: `${import.meta.env.BASE_URL}/bolus-wizard`, element: <BolusWizardPage /> },
+      { path: `${import.meta.env.BASE_URL}/food`, element: <FoodPage /> },
+      { path: `${import.meta.env.BASE_URL}/reports`, element: <ReportsPage /> },
       {
-        path: "/settings",
+        path: `${import.meta.env.BASE_URL}/settings`,
         element: <SettingsPage />,
         children: [
           {
             index: true,
             element: (
-              <Redirect to="/settings/profile" options={{ replace: true }} />
+              <Redirect to={`${import.meta.env.BASE_URL}/settings/general`} options={{ replace: true }} />
             ),
           },
           { path: "profile", element: <SettingsProfilePage /> },

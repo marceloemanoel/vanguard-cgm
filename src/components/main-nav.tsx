@@ -22,7 +22,8 @@ export function MainNav({
       {...props}
     >
       <NavLink
-        to="/"
+        to={import.meta.env.BASE_URL}
+        end
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",
@@ -35,7 +36,7 @@ export function MainNav({
         </span>
       </NavLink>
       <NavLink
-        to="/careportal"
+        to={`${import.meta.env.BASE_URL}/careportal`}
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",
@@ -48,7 +49,7 @@ export function MainNav({
         </span>
       </NavLink>
       <NavLink
-        to="/bolus-wizard"
+        to={`${import.meta.env.BASE_URL}/bolus-wizard`}
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",
@@ -61,7 +62,7 @@ export function MainNav({
         </span>
       </NavLink>
       <NavLink
-        to="/food"
+        to={`${import.meta.env.BASE_URL}/food`}
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",
@@ -74,7 +75,7 @@ export function MainNav({
         </span>
       </NavLink>
       <NavLink
-        to="/reports"
+        to={`${import.meta.env.BASE_URL}/reports`}
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",
@@ -87,7 +88,7 @@ export function MainNav({
         </span>
       </NavLink>
       <NavLink
-        to="/settings"
+        to={`${import.meta.env.BASE_URL}/settings`}
         className={({ isActive }) =>
           cn(
             "flex flex-col justify-center px-4 text-sm font-medium transition-colors hover:text-primary h-full",

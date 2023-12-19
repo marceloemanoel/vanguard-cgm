@@ -3,31 +3,26 @@ import { Outlet } from "react-router-dom";
 import { SidebarNav } from "./sidebar-nav";
 import { Helmet } from "react-helmet-async";
 
-// export const metadata: Metadata = {
-//   title: "Forms",
-//   description: "Advanced form example using react-hook-form and Zod.",
-// }
-
 const sidebarNavItems = [
   {
-    title: "Profile",
-    href: "/settings/profile",
+    title: "General Settings",
+    href: `${import.meta.env.BASE_URL}/settings/general`,
   },
   {
-    title: "Account",
-    href: "/settings/account",
+    title: "Profile",
+    href: `${import.meta.env.BASE_URL}/settings/profile`,
   },
   {
     title: "Appearance",
-    href: "/settings/appearance",
+    href: `${import.meta.env.BASE_URL}/settings/appearance`,
   },
   {
     title: "Notifications",
-    href: "/settings/notifications",
+    href: `${import.meta.env.BASE_URL}/settings/notifications`,
   },
   {
     title: "Display",
-    href: "/settings/display",
+    href: `${import.meta.env.BASE_URL}/settings/display`,
   },
 ];
 
@@ -36,7 +31,10 @@ export default function SettingsPage() {
     <>
       <Helmet>
         <title>Settings</title>
-        <meta name="description" content="Manage your account settings and set e-mail preferences." />
+        <meta
+          name="description"
+          content="Manage your account settings and set e-mail preferences."
+        />
       </Helmet>
       <div className="hidden space-y-6 p-10 pb-16 md:block">
         <div className="space-y-0.5">
