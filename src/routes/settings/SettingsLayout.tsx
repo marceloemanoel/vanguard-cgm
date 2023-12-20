@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { Outlet } from "react-router-dom";
-import { SidebarNav } from "./sidebar-nav";
+import { SidebarNav } from "../../components/SidebarNav";
 import { Helmet } from "react-helmet-async";
 
 const sidebarNavItems = [
@@ -26,7 +26,7 @@ const sidebarNavItems = [
   },
 ];
 
-export default function SettingsPage() {
+export function SettingsLayout() {
   return (
     <>
       <Helmet>

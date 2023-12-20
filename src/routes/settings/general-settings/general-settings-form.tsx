@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { LOCALES, useLocale } from "@/components/i18n-provider";
+import { LOCALES, useLocale } from "@/components/I18NProvider";
 import { Button } from "@/components/ui/button";
 import {
   Form,

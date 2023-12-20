@@ -2,7 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { GeneralSettingsForm } from "./general-settings-form";
 import { FormattedMessage } from "react-intl";
 
-export default function GeneralSettingsPage() {
+export function GeneralSettings() {
   return (
     <div className="space-y-6">
       <div>

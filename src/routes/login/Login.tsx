@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { UserAuthForm } from "@/components/user-auth-form";
+import { UserAuthForm } from "@/routes/login/UserAuthForm";
 import { Helmet } from "react-helmet-async";
 
-export default function AuthenticationPage() {
+export function Login() {
   return (
     <>
       <Helmet>

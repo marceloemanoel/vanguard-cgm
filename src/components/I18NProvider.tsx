@@ -39,7 +39,7 @@ type I18NProviderProps = {
   storageKey?: string;
 };
 
-export default function I18NProvider({
+export function I18NProvider({
   defaultLocale = LOCALE_EN,
   storageKey = "locale",
   children,

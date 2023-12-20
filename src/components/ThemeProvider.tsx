@@ -77,6 +77,11 @@ export function ThemeProvider({
     return parseResult.success ? parseResult.data : defaultTheme;
   });
 
+  const systemColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
+    ? DARK_COLOR_SCHEME
+    : LIGHT_COLOR_SCHEME;
+
   useEffect(() => {
     const root = window.document.documentElement;
 
@@ -85,20 +90,15 @@ export function ThemeProvider({
     root.classList.add(theme.color);
 
     if (theme.colorScheme === SYSTEM_COLOR_SCHEME) {
-      const systemsColorScheme = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches
-        ? DARK_COLOR_SCHEME
-        : LIGHT_COLOR_SCHEME;
-
-      root.classList.add(systemsColorScheme);
+      root.classList.add(systemColorScheme);
       return;
     }
 
     root.classList.add(theme.colorScheme);
-  }, [theme]);
+  }, [theme, systemColorScheme]);
 
   const value = {
+    systemColorScheme,
     theme,
     setTheme: (theme: Theme) => {
       localStorage.setItem(storageKey, JSON.stringify(theme));

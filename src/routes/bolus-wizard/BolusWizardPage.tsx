@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Helmet } from "react-helmet-async";
 
-export default function BolusWizardPage() {
+export function BolusWizardPage() {
   return (
     <>
       <Helmet>

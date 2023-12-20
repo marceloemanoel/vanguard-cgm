@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Helmet } from "react-helmet-async";
 
-export default function FoodPage() {
+export function FoodPage() {
   return (
     <>
       <Helmet>

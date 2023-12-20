@@ -1,10 +1,10 @@
-import { MainNav } from "@/components/main-nav";
+import { MainNav } from "@/components/MainNav";
 import { Toaster } from "@/components/ui/toaster";
-import { UserNav } from "@/components/user-nav";
+import { UserNav } from "@/components/UserNav";
 import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 
-export default function RootRoute() {
+export function AppLayout() {
   return (
     <>
       <Helmet>

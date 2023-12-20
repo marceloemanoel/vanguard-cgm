@@ -6,12 +6,12 @@ type RedirectProps = {
   options?: NavigateOptions;
 };
 
-export default function Redirect({ to, options }: RedirectProps) {
+export function Redirect({ to, options }: RedirectProps) {
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     navigate(to, options);
-  }, [navigate]);
+  }, [navigate, to, options]);
 
   return null;
 }

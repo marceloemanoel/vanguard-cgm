@@ -1,7 +1,7 @@
-import NightscoutIcon from "@/components/nightscout-icon";
+import NightscoutIcon from "@/components/NightscoutIcon";
 import { useRouteError } from "react-router-dom";
 
-export default function NotFoundPage() {
+export function NotFoundPage() {
   const error = useRouteError() as any;
   console.error(error);
 

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function Dashboard() {
+export function Dashboard() {
   return (
     <>
       <div className="flex items-center justify-between space-y-2">
