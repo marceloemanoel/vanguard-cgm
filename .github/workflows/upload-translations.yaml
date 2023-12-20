@@ -31,10 +31,6 @@ jobs:
           upload_sources: true
           upload_translations: true
           download_translations: false
-          source: "src/lang/extracted/en-US.json"
-          translation: "src/lang/compiled/%locale%.json"
-          token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-          project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
