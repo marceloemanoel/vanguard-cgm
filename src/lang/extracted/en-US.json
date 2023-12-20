@@ -3,6 +3,10 @@
     "description": "General Settings Tab on settings page",
     "message": "General Settings"
   },
+  "Fi/yD3": {
+    "description": "Language Label on general settings page",
+    "message": "Language"
+  },
   "mkiXiS": {
     "description": "General Settings tab description",
     "message": "Update your settings. Set your preferred language and timezone."
