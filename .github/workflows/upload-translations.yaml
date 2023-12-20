@@ -4,7 +4,9 @@ on:
   push:
     branches: [ main ]
 
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   synchronize-with-crowdin:
@@ -38,7 +40,7 @@ jobs:
           pull_request_body: 'New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)'
           pull_request_base_branch_name: 'main'
           source: 'src/lang/extracted/en-US.json'
-          translation: 'src/lang/compiled/%locale_with_underscore%.json'
+          translation: 'src/lang/compiled/%locale%.json'
           token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }} 
           project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
         env:
