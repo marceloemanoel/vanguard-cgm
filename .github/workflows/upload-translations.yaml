@@ -4,6 +4,11 @@ on:
   push:
     branches: [ main ]
 
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   synchronize-with-crowdin:
     runs-on: ubuntu-latest
@@ -40,6 +45,5 @@ jobs:
           token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }} 
           project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
