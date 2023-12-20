@@ -30,7 +30,6 @@ jobs:
           upload_sources: true
           upload_translations: true
           download_translations: false
-          preserve_hierarchy: true
           source: "src/lang/extracted/en-US.json"
           translation: "src/lang/compiled/%locale%.json"
           token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
