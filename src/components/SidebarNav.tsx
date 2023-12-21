@@ -1,11 +1,12 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     href: string;
-    title: string;
+    title: ReactNode;
   }[];
 }
 
