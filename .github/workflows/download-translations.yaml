@@ -24,7 +24,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Download translations
         uses: crowdin/github-action@v1.15.2
@@ -40,6 +40,13 @@ jobs:
 
       - name: Compile translations
         run: find ./src/lang/translated -maxdepth 1 -iname '*.json' -exec sh -c 'npm run compile -- "{}" --out-file "./src/lang/compiled/$(basename {})"' \;
+
+      - name: "Commit translation changes"
+        run: |
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          git add ./src/lang/compiled
+          git commit -am "Add new Crowdin translations"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
