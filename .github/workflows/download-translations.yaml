@@ -20,6 +20,9 @@ jobs:
       - name: List permissions
         run: ls -al .git/
 
+      - name: Who am I?
+        run: whoami
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
