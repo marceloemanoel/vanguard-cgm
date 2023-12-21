@@ -46,7 +46,6 @@ jobs:
         with:
           committer: GitHub Action <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          add-paths: src/lang/compiled/**/*.json
           branch: l10n_crowdin_translations
           base: main
           title: "New Crowdin translations"
