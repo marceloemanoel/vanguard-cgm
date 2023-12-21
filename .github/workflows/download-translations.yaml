@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Extract translations
+        run: npm run extract
+
       - name: crowdin action
         uses: crowdin/github-action@v1
         with:
@@ -47,7 +50,9 @@ jobs:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Compile translations
-        run: find ./src/lang/translated -maxdepth 1 -iname '*.json' -exec sh -c 'npm run compile -- "{}" --out-file "./src/lang/compiled/$(basename {})"' \;
+        run: |
+          npm run compile ./lang/extracted/en-US.json --out-file ./src/lang/compiled/en-US.json
+          find ./src/lang/translated -maxdepth 1 -iname '*.json' -exec sh -c 'npm run compile -- "{}" --out-file "./src/lang/compiled/$(basename {})"' \;
 
       - name: "Commit compiled translations"
         run: |
