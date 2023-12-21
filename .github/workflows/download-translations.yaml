@@ -42,13 +42,13 @@ jobs:
       - name: Compile translations
         run: find ./src/lang/translated -maxdepth 1 -iname '*.json' -exec sh -c 'npm run compile -- "{}" --out-file "./src/lang/compiled/$(basename {})"' \;
 
-      - name: "Commit translation changes"
-        run: |
-          sudo chown $(whoami) -R .git/
-          git config user.name ${{ github.actor }}
-          git config user.email ${{ github.actor }}@users.noreply.github.com
-          git add ./src/lang/
-          git commit -m "Add new Crowdin translations"
+      # - name: "Commit translation changes"
+      #   run: |
+      #     sudo chown $(whoami) -R .git/
+      #     git config user.name ${{ github.actor }}
+      #     git config user.email ${{ github.actor }}@users.noreply.github.com
+      #     git add ./src/lang/
+      #     git commit -m "Add new Crowdin translations"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
@@ -56,8 +56,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           committer: GitHub Action <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          # branch: l10n_crowdin_translations
+          branch: l10n_crowdin_translations
           delete-branch: true
-          # base: main
           title: "New Crowdin translations"
           body: "New Crowdin pull request with translations"
