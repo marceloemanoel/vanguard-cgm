@@ -1,0 +1,7 @@
+{
+  "*.tsx": [
+    "prettier --write",
+    "eslint",
+    "npm run extract"
+  ]
+}

@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "extract": "formatjs extract 'src/**/*.ts*' --ignore='**/*.d.ts' --out-file src/lang/extracted/en-US.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format crowdin",
     "compile": "formatjs compile  --ast --format crowdin",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -59,6 +60,8 @@
     "eslint-plugin-formatjs": "^4.11.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9",
