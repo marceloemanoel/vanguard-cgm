@@ -1,6 +1,8 @@
 name: Download translations
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *" # Once a day - https://crontab.guru/#0_0_*_*_*
@@ -53,8 +55,8 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           committer: GitHub Action <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          branch: l10n_crowdin_translations
+          # branch: l10n_crowdin_translations
           delete-branch: true
-          base: main
+          # base: main
           title: "New Crowdin translations"
           body: "New Crowdin pull request with translations"
