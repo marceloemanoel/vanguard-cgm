@@ -9,13 +9,13 @@ export function GeneralSettings() {
         <h3 className="text-lg font-medium">
           <FormattedMessage
             defaultMessage="General Settings"
-            description="General Settings Tab on settings page"
+            description="General Settings Header on settings page"
           />
         </h3>
         <p className="text-sm text-muted-foreground">
           <FormattedMessage
             defaultMessage="Update your settings. Set your preferred language and timezone."
-            description="General Settings tab description"
+            description="General Settings section description"
           />
         </p>
       </div>

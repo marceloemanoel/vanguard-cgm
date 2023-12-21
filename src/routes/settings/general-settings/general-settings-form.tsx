@@ -81,7 +81,14 @@ export function GeneralSettingsForm() {
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a verified email to display" />
+                    <SelectValue
+                      placeholder={
+                        <FormattedMessage
+                          defaultMessage="Select the language to display"
+                          description="Language select message on general settings page"
+                        />
+                      }
+                    />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -100,13 +107,21 @@ export function GeneralSettingsForm() {
                 </SelectContent>
               </Select>
               <FormDescription>
-                This is the language that will be used in the dashboard.
+                <FormattedMessage
+                  defaultMessage="This is the language that will be used in the application."
+                  description="Message describing the effect of changing the language on the application."
+                />
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Update account</Button>
+        <Button type="submit">
+          <FormattedMessage
+            defaultMessage="Save"
+            description="Save button text on General Settings page."
+          />
+        </Button>
       </form>
     </Form>
   );
