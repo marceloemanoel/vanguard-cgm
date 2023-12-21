@@ -2,6 +2,7 @@
   "*.tsx": [
     "prettier --write",
     "eslint",
-    "npm run extract"
+    "npm run extract",
+    "git add ./src/lang/extracted"
   ]
 }
