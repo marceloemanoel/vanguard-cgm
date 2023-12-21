@@ -1,8 +1,6 @@
 name: Download translations
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *" # Once a day - https://crontab.guru/#0_0_*_*_*
@@ -16,12 +14,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
-
-      - name: List permissions
-        run: ls -al .git/
-
-      - name: Who am I?
-        run: whoami
 
       - name: Set up Node
         uses: actions/setup-node@v3
@@ -46,6 +38,12 @@ jobs:
 
       - name: Compile translations
         run: find ./src/lang/translated -maxdepth 1 -iname '*.json' -exec sh -c 'npm run compile -- "{}" --out-file "./src/lang/compiled/$(basename {})"' \;
+
+      - name: "Commit translation changes"
+        run: |
+          sudo chown $(whoami) -R .git/
+          git add ./src/lang/compiled
+          git commit -m "Add new Crowdin translations"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
