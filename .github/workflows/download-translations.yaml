@@ -15,6 +15,9 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
 
+      - name: List permissions
+        run: ls -al .git/
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
