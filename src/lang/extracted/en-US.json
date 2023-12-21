@@ -31,6 +31,14 @@
     "description": "Care Portal link at the top level navigation",
     "message": "Care Portal"
   },
+  "QJFtJB": {
+    "description": "Appearance link on settings page sidebar navigation",
+    "message": "Appearance"
+  },
+  "R6nALk": {
+    "description": "General Settings link on settings page sidebar navigation",
+    "message": "General Settings"
+  },
   "ZgUZMB": {
     "description": "Settings link at the top level navigation",
     "message": "Settings"

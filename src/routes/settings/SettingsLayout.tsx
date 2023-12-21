@@ -1,11 +1,17 @@
 import { Separator } from "@/components/ui/separator";
+import { Helmet } from "react-helmet-async";
+import { FormattedMessage } from "react-intl";
 import { Outlet } from "react-router-dom";
 import { SidebarNav } from "../../components/SidebarNav";
-import { Helmet } from "react-helmet-async";
 
 const sidebarNavItems = [
   {
-    title: "General Settings",
+    title: (
+      <FormattedMessage
+        defaultMessage="General Settings"
+        description="General Settings link on settings page sidebar navigation"
+      />
+    ),
     href: `${import.meta.env.BASE_URL}/settings/general`,
   },
   {
@@ -13,7 +19,12 @@ const sidebarNavItems = [
     href: `${import.meta.env.BASE_URL}/settings/profile`,
   },
   {
-    title: "Appearance",
+    title: (
+      <FormattedMessage
+        defaultMessage="Appearance"
+        description="Appearance link on settings page sidebar navigation"
+      />
+    ),
     href: `${import.meta.env.BASE_URL}/settings/appearance`,
   },
   {
