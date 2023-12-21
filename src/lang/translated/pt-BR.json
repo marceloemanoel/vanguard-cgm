@@ -1,18 +1,30 @@
 {
-  "9+rins": {
-    "description": "General Settings Tab on settings page",
-    "message": "Configurações gerais"
+  "6+wYRB": {
+    "description": "Save button text on General Settings page.",
+    "message": "Salvar"
   },
   "Fi/yD3": {
     "description": "Language Label on general settings page",
     "message": "Idioma"
   },
-  "mkiXiS": {
-    "description": "General Settings tab description",
-    "message": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
+  "HO5Xl0": {
+    "description": "General Settings Header on settings page",
+    "message": "Configurações gerais"
+  },
+  "k/hzim": {
+    "description": "Message describing the effect of changing the language on the application.",
+    "message": "Este é o idioma que será usado no aplicativo."
+  },
+  "pJYE4C": {
+    "description": "Language select message on general settings page",
+    "message": "Selecione o idioma a exibir"
   },
   "qp+BEN": {
     "description": "Dashboard overview section",
     "message": "Geral"
+  },
+  "x6/b1g": {
+    "description": "General Settings section description",
+    "message": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
   }
 }

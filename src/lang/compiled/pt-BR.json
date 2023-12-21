@@ -1,8 +1,8 @@
 {
-  "9+rins": [
+  "6+wYRB": [
     {
       "type": 0,
-      "value": "Configurações gerais"
+      "value": "Salvar"
     }
   ],
   "Fi/yD3": [
@@ -11,16 +11,34 @@
       "value": "Idioma"
     }
   ],
-  "mkiXiS": [
+  "HO5Xl0": [
     {
       "type": 0,
-      "value": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
+      "value": "Configurações gerais"
+    }
+  ],
+  "k/hzim": [
+    {
+      "type": 0,
+      "value": "Este é o idioma que será usado no aplicativo."
+    }
+  ],
+  "pJYE4C": [
+    {
+      "type": 0,
+      "value": "Selecione o idioma a exibir"
     }
   ],
   "qp+BEN": [
     {
       "type": 0,
       "value": "Geral"
+    }
+  ],
+  "x6/b1g": [
+    {
+      "type": 0,
+      "value": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "9+rins": [
+  "6+wYRB": [
     {
       "type": 0,
-      "value": "General Settings"
+      "value": "Save"
     }
   ],
   "Fi/yD3": [
@@ -11,16 +11,34 @@
       "value": "Language"
     }
   ],
-  "mkiXiS": [
+  "HO5Xl0": [
     {
       "type": 0,
-      "value": "Update your settings. Set your preferred language and timezone."
+      "value": "General Settings"
+    }
+  ],
+  "k/hzim": [
+    {
+      "type": 0,
+      "value": "This is the language that will be used in the application."
+    }
+  ],
+  "pJYE4C": [
+    {
+      "type": 0,
+      "value": "Select the language to display"
     }
   ],
   "qp+BEN": [
     {
       "type": 0,
       "value": "Overview"
+    }
+  ],
+  "x6/b1g": [
+    {
+      "type": 0,
+      "value": "Update your settings. Set your preferred language and timezone."
     }
   ]
 }
