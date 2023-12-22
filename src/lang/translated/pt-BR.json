@@ -1,15 +1,47 @@
 {
+  "0D/YMh": {
+    "description": "Bolus Wizard link at the top level navigation",
+    "message": "Assistente de Bolus"
+  },
+  "2Jn/FI": {
+    "description": "Food link at the top level navigation",
+    "message": "Alimentação"
+  },
   "6+wYRB": {
     "description": "Save button text on General Settings page.",
     "message": "Salvar"
+  },
+  "EkEycb": {
+    "description": "Home link at the top level navigation",
+    "message": "Home"
   },
   "Fi/yD3": {
     "description": "Language Label on general settings page",
     "message": "Idioma"
   },
+  "FtgNz+": {
+    "description": "Reports link at the top level navigation",
+    "message": "Relatórios"
+  },
   "HO5Xl0": {
     "description": "General Settings Header on settings page",
     "message": "Configurações gerais"
+  },
+  "Q3AYKA": {
+    "description": "Care Portal link at the top level navigation",
+    "message": "Care Portal"
+  },
+  "QJFtJB": {
+    "description": "Appearance link on settings page sidebar navigation",
+    "message": "Aparência"
+  },
+  "R6nALk": {
+    "description": "General Settings link on settings page sidebar navigation",
+    "message": "Configurações gerais"
+  },
+  "ZgUZMB": {
+    "description": "Settings link at the top level navigation",
+    "message": "Configurações"
   },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",
