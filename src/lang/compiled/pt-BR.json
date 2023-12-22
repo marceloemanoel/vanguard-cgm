@@ -1,8 +1,26 @@
 {
+  "0D/YMh": [
+    {
+      "type": 0,
+      "value": "Assistente de Bolus"
+    }
+  ],
+  "2Jn/FI": [
+    {
+      "type": 0,
+      "value": "Alimentação"
+    }
+  ],
   "6+wYRB": [
     {
       "type": 0,
       "value": "Salvar"
+    }
+  ],
+  "EkEycb": [
+    {
+      "type": 0,
+      "value": "Home"
     }
   ],
   "Fi/yD3": [
@@ -11,10 +29,40 @@
       "value": "Idioma"
     }
   ],
+  "FtgNz+": [
+    {
+      "type": 0,
+      "value": "Relatórios"
+    }
+  ],
   "HO5Xl0": [
     {
       "type": 0,
       "value": "Configurações gerais"
+    }
+  ],
+  "Q3AYKA": [
+    {
+      "type": 0,
+      "value": "Care Portal"
+    }
+  ],
+  "QJFtJB": [
+    {
+      "type": 0,
+      "value": "Aparência"
+    }
+  ],
+  "R6nALk": [
+    {
+      "type": 0,
+      "value": "Configurações gerais"
+    }
+  ],
+  "ZgUZMB": [
+    {
+      "type": 0,
+      "value": "Configurações"
     }
   ],
   "k/hzim": [

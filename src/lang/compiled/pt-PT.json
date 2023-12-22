@@ -1,8 +1,26 @@
 {
+  "0D/YMh": [
+    {
+      "type": 0,
+      "value": "Bolus Wizard"
+    }
+  ],
+  "2Jn/FI": [
+    {
+      "type": 0,
+      "value": "Food"
+    }
+  ],
   "6+wYRB": [
     {
       "type": 0,
       "value": "Save"
+    }
+  ],
+  "EkEycb": [
+    {
+      "type": 0,
+      "value": "Home"
     }
   ],
   "Fi/yD3": [
@@ -11,10 +29,40 @@
       "value": "Language"
     }
   ],
+  "FtgNz+": [
+    {
+      "type": 0,
+      "value": "Reports"
+    }
+  ],
   "HO5Xl0": [
     {
       "type": 0,
       "value": "General Settings"
+    }
+  ],
+  "Q3AYKA": [
+    {
+      "type": 0,
+      "value": "Care Portal"
+    }
+  ],
+  "QJFtJB": [
+    {
+      "type": 0,
+      "value": "Appearance"
+    }
+  ],
+  "R6nALk": [
+    {
+      "type": 0,
+      "value": "General Settings"
+    }
+  ],
+  "ZgUZMB": [
+    {
+      "type": 0,
+      "value": "Settings"
     }
   ],
   "k/hzim": [
