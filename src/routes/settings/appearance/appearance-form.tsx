@@ -4,7 +4,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { COLORS, COLOR_SCHEMES, useTheme } from "@/components/ThemeProvider";
+import {
+  COLORS,
+  COLOR_SCHEMES,
+  LIGHT_COLOR_SCHEME,
+  useSystemColorScheme,
+  useTheme,
+} from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -31,6 +37,7 @@ type AppearanceFormValues = z.infer<typeof appearanceFormSchema>;
 
 export function AppearanceForm() {
   const { theme, setTheme } = useTheme();
+  const { systemColorScheme } = useSystemColorScheme();
 
   const form = useForm<AppearanceFormValues>({
     resolver: zodResolver(appearanceFormSchema),
@@ -65,7 +72,7 @@ export function AppearanceForm() {
       <div className="space-y-2 rounded-sm bg-slate-950 p-2">
         <div className="space-y-2 rounded-md bg-slate-800 p-2 shadow-sm">
           <div className="h-2 w-[80px] rounded-lg bg-slate-400" />
-          <div className="h-2 w-[100px] rounded-lg bg-slate-400" />
+          <div className="h-2 w-[80px] rounded-lg bg-slate-400" />
         </div>
         <div className="flex items-center space-x-2 rounded-md bg-slate-800 p-2 shadow-sm">
           <div className="h-4 w-4 rounded-full bg-slate-400" />
@@ -95,14 +102,16 @@ export function AppearanceForm() {
               <RadioGroup
                 onValueChange={field.onChange}
                 defaultValue={field.value}
-                className="grid max-w-md grid-cols-2 gap-8 pt-2"
+                className="grid max-w-md grid-cols-3 gap-8 pt-2"
               >
                 <FormItem>
                   <FormLabel className="[&:has([data-state=checked])>div]:border-primary">
                     <FormControl>
                       <RadioGroupItem value="system" className="sr-only" />
                     </FormControl>
-                    {lightTheme}
+                    {systemColorScheme === LIGHT_COLOR_SCHEME
+                      ? lightTheme
+                      : darkTheme}
                     <span className="block w-full p-2 text-center font-normal">
                       System Default
                     </span>
@@ -159,6 +168,7 @@ export function AppearanceForm() {
                       <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-muted hover:bg-accent hover:text-accent-foreground">
                         <div
                           className={cn(
+                            // needs to manually assign all the theme colors to prevent tailwind to remove them from final css
                             "h-4 w-4 rounded-full bg-theme-blue bg-theme-green bg-theme-orange bg-theme-rose bg-theme-yellow p-2",
                             `bg-theme-${color === "default" ? "rose" : color}`,
                           )}

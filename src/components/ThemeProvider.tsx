@@ -1,11 +1,12 @@
-import { z } from "zod";
 import {
   PropsWithChildren,
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useState,
 } from "react";
+import { z } from "zod";
 
 export const SYSTEM_COLOR_SCHEME = "system" as const;
 export const DARK_COLOR_SCHEME = "dark" as const;
@@ -38,6 +39,10 @@ const ThemeSchema = z.object({
 export type Theme = z.infer<typeof ThemeSchema>;
 
 export type ColorScheme = Theme["colorScheme"];
+export type SystemColorScheme = Exclude<
+  ColorScheme,
+  typeof SYSTEM_COLOR_SCHEME
+>;
 export type ThemeColor = Theme["color"];
 
 type ThemeProviderState = {
@@ -67,6 +72,7 @@ export function ThemeProvider({
   storageKey = "ui-theme",
   ...props
 }: PropsWithChildren<ThemeProviderProps>) {
+  const { systemColorScheme } = useSystemColorScheme();
   const [theme, setTheme] = useState<Theme>(() => {
     const existingTheme = localStorage.getItem(storageKey);
 
@@ -77,16 +83,10 @@ export function ThemeProvider({
     return parseResult.success ? parseResult.data : defaultTheme;
   });
 
-  const systemColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
-    .matches
-    ? DARK_COLOR_SCHEME
-    : LIGHT_COLOR_SCHEME;
-
   useEffect(() => {
     const root = window.document.documentElement;
 
     root.classList.remove(...COLOR_SCHEMES, ...COLORS);
-
     root.classList.add(theme.color);
 
     if (theme.colorScheme === SYSTEM_COLOR_SCHEME) {
@@ -98,7 +98,6 @@ export function ThemeProvider({
   }, [theme, systemColorScheme]);
 
   const value = {
-    systemColorScheme,
     theme,
     setTheme: (theme: Theme) => {
       localStorage.setItem(storageKey, JSON.stringify(theme));
@@ -121,3 +120,30 @@ export const useTheme = () => {
 
   return context;
 };
+
+export function useSystemColorScheme() {
+  const [mediaQuery] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)"),
+  );
+
+  const getColorScheme = useCallback(
+    (): SystemColorScheme =>
+      mediaQuery.matches ? DARK_COLOR_SCHEME : LIGHT_COLOR_SCHEME,
+    [mediaQuery],
+  );
+
+  const [systemColorScheme, setSystemColorScheme] = useState(getColorScheme());
+
+  useEffect(() => {
+    const changeSystemColorScheme = () =>
+      setSystemColorScheme(() => getColorScheme());
+
+    mediaQuery.addEventListener("change", changeSystemColorScheme);
+
+    return () => {
+      mediaQuery.removeEventListener("change", changeSystemColorScheme);
+    };
+  }, [mediaQuery, getColorScheme]);
+
+  return { systemColorScheme };
+}
