@@ -1,8 +1,24 @@
 {
+  "+uuBWJ": [
+    {
+      "type": 0,
+      "value": "Este é o seu Token de API do Nightscout"
+    }
+  ],
   "0D/YMh": [
     {
       "type": 0,
       "value": "Assistente de Bolus"
+    }
+  ],
+  "0Dauay": [
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": " precisa ser informado"
     }
   ],
   "2Jn/FI": [
@@ -15,6 +31,18 @@
     {
       "type": 0,
       "value": "Salvar"
+    }
+  ],
+  "9+AJ0J": [
+    {
+      "type": 0,
+      "value": "URL do Nightscout"
+    }
+  ],
+  "DzBzAk": [
+    {
+      "type": 0,
+      "value": "Url inválida"
     }
   ],
   "EkEycb": [
@@ -41,10 +69,22 @@
       "value": "Configurações gerais"
     }
   ],
+  "N5RXci": [
+    {
+      "type": 0,
+      "value": "Este é o endereço do seu Nightscout"
+    }
+  ],
+  "PsK2PO": [
+    {
+      "type": 0,
+      "value": "Token da API"
+    }
+  ],
   "Q3AYKA": [
     {
       "type": 0,
-      "value": "Care Portal"
+      "value": "Portal de Cuidados"
     }
   ],
   "QJFtJB": [
@@ -65,16 +105,34 @@
       "value": "Configurações"
     }
   ],
+  "eaRlsH": [
+    {
+      "type": 0,
+      "value": "Iniciar sessão"
+    }
+  ],
   "k/hzim": [
     {
       "type": 0,
       "value": "Este é o idioma que será usado no aplicativo."
     }
   ],
+  "nJpT27": [
+    {
+      "type": 0,
+      "value": "Só é necessário para atualizar dados do Nightscout ou se o seu Nightscout não permite acesso anônimo"
+    }
+  ],
   "pJYE4C": [
     {
       "type": 0,
       "value": "Selecione o idioma a exibir"
+    }
+  ],
+  "qVEk0o": [
+    {
+      "type": 0,
+      "value": "Digite seu endereço do Nighscout e Token de API para acessar seus dados"
     }
   ],
   "qp+BEN": [

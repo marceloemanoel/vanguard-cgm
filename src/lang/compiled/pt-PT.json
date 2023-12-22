@@ -1,8 +1,24 @@
 {
+  "+uuBWJ": [
+    {
+      "type": 0,
+      "value": "This is your Nightscout API Token"
+    }
+  ],
   "0D/YMh": [
     {
       "type": 0,
       "value": "Bolus Wizard"
+    }
+  ],
+  "0Dauay": [
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": " is required"
     }
   ],
   "2Jn/FI": [
@@ -15,6 +31,18 @@
     {
       "type": 0,
       "value": "Save"
+    }
+  ],
+  "9+AJ0J": [
+    {
+      "type": 0,
+      "value": "Nightscout URL"
+    }
+  ],
+  "DzBzAk": [
+    {
+      "type": 0,
+      "value": "Invalid url"
     }
   ],
   "EkEycb": [
@@ -41,6 +69,18 @@
       "value": "General Settings"
     }
   ],
+  "N5RXci": [
+    {
+      "type": 0,
+      "value": "This is your Nightscout Address"
+    }
+  ],
+  "PsK2PO": [
+    {
+      "type": 0,
+      "value": "API Token"
+    }
+  ],
   "Q3AYKA": [
     {
       "type": 0,
@@ -65,16 +105,34 @@
       "value": "Settings"
     }
   ],
+  "eaRlsH": [
+    {
+      "type": 0,
+      "value": "Sign In"
+    }
+  ],
   "k/hzim": [
     {
       "type": 0,
       "value": "This is the language that will be used in the application."
     }
   ],
+  "nJpT27": [
+    {
+      "type": 0,
+      "value": "Only required for updating nightscout data, or if your nightscout has unauthorised access switched off"
+    }
+  ],
   "pJYE4C": [
     {
       "type": 0,
       "value": "Select the language to display"
+    }
+  ],
+  "qVEk0o": [
+    {
+      "type": 0,
+      "value": "Enter your Nighscout Address and API Token to access your data"
     }
   ],
   "qp+BEN": [

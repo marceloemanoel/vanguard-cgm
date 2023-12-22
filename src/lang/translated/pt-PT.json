@@ -1,7 +1,15 @@
 {
+  "+uuBWJ": {
+    "description": "Description of Nightscout API Token on authentication form",
+    "message": "This is your Nightscout API Token"
+  },
   "0D/YMh": {
     "description": "Bolus Wizard link at the top level navigation",
     "message": "Bolus Wizard"
+  },
+  "0Dauay": {
+    "description": "A message describing a required field validation error",
+    "message": "{fieldName} is required"
   },
   "2Jn/FI": {
     "description": "Food link at the top level navigation",
@@ -10,6 +18,14 @@
   "6+wYRB": {
     "description": "Save button text on General Settings page.",
     "message": "Save"
+  },
+  "9+AJ0J": {
+    "description": "Nightscout URL label on authentication form",
+    "message": "Nightscout URL"
+  },
+  "DzBzAk": {
+    "description": "A message describing an invalid url",
+    "message": "Invalid url"
   },
   "EkEycb": {
     "description": "Home link at the top level navigation",
@@ -27,6 +43,14 @@
     "description": "General Settings Header on settings page",
     "message": "General Settings"
   },
+  "N5RXci": {
+    "description": "Description of Nightscout URL field on authentication form",
+    "message": "This is your Nightscout Address"
+  },
+  "PsK2PO": {
+    "description": "Nightscout API Token label on authentication form",
+    "message": "API Token"
+  },
   "Q3AYKA": {
     "description": "Care Portal link at the top level navigation",
     "message": "Care Portal"
@@ -43,13 +67,25 @@
     "description": "Settings link at the top level navigation",
     "message": "Settings"
   },
+  "eaRlsH": {
+    "description": "Sign in form header",
+    "message": "Sign In"
+  },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",
     "message": "This is the language that will be used in the application."
   },
+  "nJpT27": {
+    "description": "Describes the API Token Usage",
+    "message": "Only required for updating nightscout data, or if your nightscout has unauthorised access switched off"
+  },
   "pJYE4C": {
     "description": "Language select message on general settings page",
     "message": "Select the language to display"
+  },
+  "qVEk0o": {
+    "description": "Sign in form description",
+    "message": "Enter your Nighscout Address and API Token to access your data"
   },
   "qp+BEN": {
     "description": "Dashboard overview section",
