@@ -1,7 +1,15 @@
 {
+  "+uuBWJ": {
+    "description": "Description of Nightscout API Token on authentication form",
+    "message": "Este é o seu Token de API do Nightscout"
+  },
   "0D/YMh": {
     "description": "Bolus Wizard link at the top level navigation",
     "message": "Assistente de Bolus"
+  },
+  "0Dauay": {
+    "description": "A message describing a required field validation error",
+    "message": "{fieldName} precisa ser informado"
   },
   "2Jn/FI": {
     "description": "Food link at the top level navigation",
@@ -10,6 +18,14 @@
   "6+wYRB": {
     "description": "Save button text on General Settings page.",
     "message": "Salvar"
+  },
+  "9+AJ0J": {
+    "description": "Nightscout URL label on authentication form",
+    "message": "URL do Nightscout"
+  },
+  "DzBzAk": {
+    "description": "A message describing an invalid url",
+    "message": "Url inválida"
   },
   "EkEycb": {
     "description": "Home link at the top level navigation",
@@ -27,9 +43,17 @@
     "description": "General Settings Header on settings page",
     "message": "Configurações gerais"
   },
+  "N5RXci": {
+    "description": "Description of Nightscout URL field on authentication form",
+    "message": "Este é o endereço do seu Nightscout"
+  },
+  "PsK2PO": {
+    "description": "Nightscout API Token label on authentication form",
+    "message": "Token da API"
+  },
   "Q3AYKA": {
     "description": "Care Portal link at the top level navigation",
-    "message": "Care Portal"
+    "message": "Portal de Cuidados"
   },
   "QJFtJB": {
     "description": "Appearance link on settings page sidebar navigation",
@@ -43,13 +67,25 @@
     "description": "Settings link at the top level navigation",
     "message": "Configurações"
   },
+  "eaRlsH": {
+    "description": "Sign in form header",
+    "message": "Iniciar sessão"
+  },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",
     "message": "Este é o idioma que será usado no aplicativo."
   },
+  "nJpT27": {
+    "description": "Describes the API Token Usage",
+    "message": "Só é necessário para atualizar dados do Nightscout ou se o seu Nightscout não permite acesso anônimo"
+  },
   "pJYE4C": {
     "description": "Language select message on general settings page",
     "message": "Selecione o idioma a exibir"
+  },
+  "qVEk0o": {
+    "description": "Sign in form description",
+    "message": "Digite seu endereço do Nighscout e Token de API para acessar seus dados"
   },
   "qp+BEN": {
     "description": "Dashboard overview section",
