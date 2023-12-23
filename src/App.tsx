@@ -4,20 +4,23 @@ import { I18NProvider } from "./components/I18NProvider";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { routes } from "./routes";
 import { TooltipProvider } from "./components/ui/tooltip";
+import { AuthProvider } from "./components/AuthProvider";
 
 const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <TooltipProvider>
-      <I18NProvider>
-        <HelmetProvider>
-          <ThemeProvider>
-            <RouterProvider router={router} />
-          </ThemeProvider>
-        </HelmetProvider>
-      </I18NProvider>
-    </TooltipProvider>
+    <I18NProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <HelmetProvider>
+            <ThemeProvider>
+              <RouterProvider router={router} />
+            </ThemeProvider>
+          </HelmetProvider>
+        </TooltipProvider>
+      </AuthProvider>
+    </I18NProvider>
   );
 }
 

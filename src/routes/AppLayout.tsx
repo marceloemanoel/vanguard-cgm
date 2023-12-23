@@ -1,10 +1,18 @@
+import { useAuthContext } from "@/components/AuthProvider";
 import { MainNav } from "@/components/MainNav";
+import { Redirect } from "@/components/Redirect";
 import { Toaster } from "@/components/ui/toaster";
 import { UserNav } from "@/components/UserNav";
 import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 
 export function AppLayout() {
+  const { authContext } = useAuthContext();
+
+  if (!authContext || !authContext?.url) {
+    return <Redirect to={`${import.meta.env.BASE_URL}/auth`} />;
+  }
+
   return (
     <>
       <Helmet>

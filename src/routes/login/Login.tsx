@@ -1,4 +1,5 @@
 import NightscoutIcon from "@/components/NightscoutIcon";
+import { Toaster } from "@/components/ui/toaster";
 import { UserAuthForm } from "@/routes/login/UserAuthForm";
 import { Helmet } from "react-helmet-async";
 import { FormattedMessage } from "react-intl";
@@ -22,16 +23,6 @@ export function Login() {
               Vangard CGM
             </span>
           </div>
-          {/* <div className="relative z-20 mt-auto">
-            <blockquote className="space-y-2">
-              <p className="text-lg">
-                &ldquo;This library has saved me countless hours of work and
-                helped me deliver stunning designs to my clients faster than
-                ever before.&rdquo;
-              </p>
-              <footer className="text-sm">Sofia Davis</footer>
-            </blockquote>
-          </div> */}
         </div>
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
@@ -50,23 +41,7 @@ export function Login() {
               </p>
             </div>
             <UserAuthForm />
-            {/* <p className="px-8 text-center text-sm text-muted-foreground">
-              By clicking continue, you agree to our{" "}
-              <Link
-                to="/terms"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Terms of Service
-              </Link>{" "}
-              and{" "}
-              <Link
-                to="/privacy"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Privacy Policy
-              </Link>
-              .
-            </p> */}
+            <Toaster />
           </div>
         </div>
       </div>

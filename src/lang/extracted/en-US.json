@@ -23,6 +23,10 @@
     "description": "Nightscout URL label on authentication form",
     "message": "Nightscout URL"
   },
+  "APf+1I": {
+    "description": "Sign in form submit button",
+    "message": "Sign In"
+  },
   "DzBzAk": {
     "description": "A message describing an invalid url",
     "message": "Invalid url"
@@ -70,6 +74,10 @@
   "eaRlsH": {
     "description": "Sign in form header",
     "message": "Sign In"
+  },
+  "eyCNoG": {
+    "description": "A successfull connection was stabelished with Nightscout",
+    "message": "Successfully connected with Nightscout at {address}"
   },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",

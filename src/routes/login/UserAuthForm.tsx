@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import { useAuthContext } from "@/components/AuthProvider";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -17,6 +18,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LucideHelpCircle } from "lucide-react";
@@ -33,9 +35,7 @@ function makeAuthFormSchema(
     url: z
       .string({ required_error: requiredErrorMsg("url") })
       .url({ message: urlErrorMsg ?? "" }),
-    apiToken: z.string({
-      required_error: requiredErrorMsg("Api Token") ?? "",
-    }),
+    apiToken: z.string().optional(),
   });
 }
 
@@ -44,6 +44,8 @@ type AuthFormValues = z.infer<ReturnType<typeof makeAuthFormSchema>>;
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
+  // const navigate = useNavigate();
+  const { authContext, setAuthContext } = useAuthContext();
   const intl = useIntl();
   const [isLoading] = useState(false);
 
@@ -65,10 +67,29 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     resolver: zodResolver(
       makeAuthFormSchema(requiredErrorMsg, urlFormatErrorMsg),
     ),
+    defaultValues: authContext,
   });
 
   async function onSubmit(data: AuthFormValues) {
-    console.log(data);
+    setAuthContext(data);
+    // navigate(import.meta.env.BASE_URL);
+
+    const successMsg = intl.formatMessage(
+      {
+        defaultMessage: "Successfully connected with Nightscout at {address}",
+        description: "A successfull connection was stabelished with Nightscout",
+      },
+      { address: data.url },
+    );
+
+    toast({
+      title: successMsg,
+      // description: (
+      //   <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+      //     <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+      //   </pre>
+      // ),
+    });
   }
 
   return (
@@ -143,7 +164,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               {isLoading && (
                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
               )}
-              Sign In
+              <FormattedMessage
+                defaultMessage="Sign In"
+                description="Sign in form submit button"
+              />
             </Button>
           </div>
         </form>
