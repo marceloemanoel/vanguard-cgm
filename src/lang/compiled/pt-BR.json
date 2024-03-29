@@ -111,6 +111,12 @@
       "value": "Iniciar sessão"
     }
   ],
+  "APf+1I": [
+    {
+      "type": 0,
+      "value": "Entrar"
+    }
+  ],
   "k/hzim": [
     {
       "type": 0,
@@ -145,6 +151,12 @@
     {
       "type": 0,
       "value": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
+    }
+  ],
+  "tsMwb4": [
+    {
+      "type": 0,
+      "value": "Conexão bem sucedida com o servidor Nightscout em {address}"
     }
   ]
 }

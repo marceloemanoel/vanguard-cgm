@@ -15,6 +15,8 @@ export const LOCALE_FR = "fr" as const;
 
 export const LOCALES = [LOCALE_EN, LOCALE_PT, LOCALE_PTBR, LOCALE_FR] as const;
 
+export const INITIAL_MESSAGES = {};
+
 export const LocaleSchema = z.enum(LOCALES, {
   description: "Locales avaible in the application",
   required_error: "Application locale is required",
@@ -53,7 +55,7 @@ export function I18NProvider({
 
     return parseResult.success ? parseResult.data : defaultLocale;
   });
-  const [messages, setMessages] = useState({});
+  const [messages, setMessages] = useState(INITIAL_MESSAGES);
 
   useEffect(() => {
     const intlLocale = new Intl.Locale(locale);
@@ -73,6 +75,7 @@ export function I18NProvider({
         await loadMessages(intlLocale.language);
       }
     }
+
     load();
   }, [locale, setMessages, storageKey]);
 
@@ -80,6 +83,10 @@ export function I18NProvider({
     locale,
     setLocale,
   };
+
+  if (messages === INITIAL_MESSAGES) {
+    return null;
+  }
 
   return (
     <I18NProviderContext.Provider value={value}>

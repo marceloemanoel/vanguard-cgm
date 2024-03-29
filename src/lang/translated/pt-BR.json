@@ -71,6 +71,10 @@
     "description": "Sign in form header",
     "message": "Iniciar sessão"
   },
+  "APf+1I": {
+    "description": "Sign in form submit button",
+    "message": "Entrar"
+  },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",
     "message": "Este é o idioma que será usado no aplicativo."
@@ -94,5 +98,9 @@
   "x6/b1g": {
     "description": "General Settings section description",
     "message": "Atualize suas configurações. Defina seu idioma e fuso horário preferidos."
+  },
+  "tsMwb4": {
+    "description": "A successfull connection was stabelished with Nightscout",
+    "message": "Conexão bem sucedida com o Nightscout em '{address}'"
   }
 }

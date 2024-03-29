@@ -35,6 +35,10 @@
     "description": "Home link at the top level navigation",
     "message": "Home"
   },
+  "F/aY3T": {
+    "description": "A message describing the need to use the CORS plugin on the backend",
+    "message": "This usually means that you need to setup the CORS plugin"
+  },
   "Fi/yD3": {
     "description": "Language Label on general settings page",
     "message": "Language"
@@ -46,6 +50,10 @@
   "HO5Xl0": {
     "description": "General Settings Header on settings page",
     "message": "General Settings"
+  },
+  "MrUKWc": {
+    "description": "A failure error while stabelishing the connection with Nightscout server",
+    "message": "Could not connected with Nightscout at {address}"
   },
   "N5RXci": {
     "description": "Description of Nightscout URL field on authentication form",
@@ -75,9 +83,9 @@
     "description": "Sign in form header",
     "message": "Sign In"
   },
-  "eyCNoG": {
+  "ip4Vnl": {
     "description": "A successfull connection was stabelished with Nightscout",
-    "message": "Successfully connected with Nightscout at {address}"
+    "message": "Successfully connect with Nightscout at {address}"
   },
   "k/hzim": {
     "description": "Message describing the effect of changing the language on the application.",

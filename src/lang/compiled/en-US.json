@@ -39,6 +39,12 @@
       "value": "Nightscout URL"
     }
   ],
+  "APf+1I": [
+    {
+      "type": 0,
+      "value": "Sign In"
+    }
+  ],
   "DzBzAk": [
     {
       "type": 0,
@@ -139,6 +145,12 @@
     {
       "type": 0,
       "value": "Overview"
+    }
+  ],
+  "tsMwb4": [
+    {
+      "type": 0,
+      "value": "Successfully connected with Nightscout at {address}"
     }
   ],
   "x6/b1g": [
