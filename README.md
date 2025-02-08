@@ -1,4 +1,4 @@
-# vangard
+# vanguard
 An alternative ui for nightscout remote cgm
 
 # React + TypeScript + Vite
